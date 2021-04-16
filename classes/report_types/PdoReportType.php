@@ -106,7 +106,7 @@ class PdoReportType extends ReportTypeBase {
 		$displayColumn = $params['column'];
 		if(isset($params['display'])) $displayColumn = $params['display'];
 
-		$query = 'SELECT DISTINCT `'.$params['column'].'` as val, `'.$displayColumn.'` as disp FROM '.$params['table'];
+		$query = 'SELECT DISTINCT "'.$params['column'].'" as val, "'.$displayColumn.'" as disp FROM '.$params['table'];
 
 		if(isset($params['where'])) {
 			$query .= ' WHERE '.$params['where'];
