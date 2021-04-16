@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ff3d65b96641c6a40ec0ca839382c62b",
+    "content-hash": "8f82bbbad90732afa06c27ba86cced9d",
     "packages": [
         {
             "name": "adodb/adodb-php",
@@ -12,17 +12,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ADOdb/ADOdb.git",
-                "reference": "7d941967aa1b81d636f5b6e1f3549b2fc95248b9"
+                "reference": "891f5544a8db0ddf4ccef704b63ebbd654fb2d4e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ADOdb/ADOdb/zipball/7d941967aa1b81d636f5b6e1f3549b2fc95248b9",
-                "reference": "7d941967aa1b81d636f5b6e1f3549b2fc95248b9",
+                "url": "https://api.github.com/repos/ADOdb/ADOdb/zipball/891f5544a8db0ddf4ccef704b63ebbd654fb2d4e",
+                "reference": "891f5544a8db0ddf4ccef704b63ebbd654fb2d4e",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2"
+                "php": "^5.5.9 || ^7.0 || ^8.0"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "files": [
@@ -32,7 +33,7 @@
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause",
-                "LGPL-2.1"
+                "LGPL-2.1-or-later"
             ],
             "authors": [
                 {
@@ -50,7 +51,7 @@
                 }
             ],
             "description": "ADOdb is a PHP database abstraction layer library",
-            "homepage": "http://adodb.sourceforge.net/",
+            "homepage": "https://adodb.org/",
             "keywords": [
                 "abstraction",
                 "database",
@@ -58,39 +59,44 @@
                 "library",
                 "php"
             ],
-            "time": "2016-04-10 15:59:20"
+            "support": {
+                "issues": "https://github.com/ADOdb/ADOdb/issues",
+                "source": "https://github.com/ADOdb/ADOdb"
+            },
+            "time": "2021-04-08T15:48:14+00:00"
         },
         {
             "name": "alcaeus/mongo-php-adapter",
-            "version": "dev-master",
+            "version": "1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/alcaeus/mongo-php-adapter.git",
-                "reference": "72870346ae8bf53f8238593dc1dfe73efdc1c77a"
+                "reference": "9c57038311aacad9e50b2ad85b8b3fa59e8fc276"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/alcaeus/mongo-php-adapter/zipball/72870346ae8bf53f8238593dc1dfe73efdc1c77a",
-                "reference": "72870346ae8bf53f8238593dc1dfe73efdc1c77a",
+                "url": "https://api.github.com/repos/alcaeus/mongo-php-adapter/zipball/9c57038311aacad9e50b2ad85b8b3fa59e8fc276",
+                "reference": "9c57038311aacad9e50b2ad85b8b3fa59e8fc276",
                 "shasum": ""
             },
             "require": {
+                "ext-ctype": "*",
                 "ext-hash": "*",
                 "ext-mongodb": "^1.2.0",
                 "mongodb/mongodb": "^1.0.1",
-                "php": "^5.6 || ^7.0"
+                "php": "^5.6 || ^7.0 || ^8.0"
             },
             "provide": {
                 "ext-mongo": "1.6.14"
             },
             "require-dev": {
-                "phpunit/phpunit": "^5.7 || ^6.0"
+                "squizlabs/php_codesniffer": "^3.2",
+                "symfony/phpunit-bridge": "^4.4.16 || ^5.2"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1.x-dev"
-                }
+                "branch-version": "1.x"
             },
             "autoload": {
                 "psr-0": {
@@ -117,24 +123,102 @@
                     "email": "olivier.lechevalier@gmail.com"
                 }
             ],
-            "description": "Adapter to provide ext-mongo interface on top of mongo-php-libary",
+            "description": "Adapter to provide ext-mongo interface on top of mongo-php-library",
             "keywords": [
                 "database",
                 "mongodb"
             ],
-            "time": "2017-05-13 19:34:12"
+            "support": {
+                "issues": "https://github.com/alcaeus/mongo-php-adapter/issues",
+                "source": "https://github.com/alcaeus/mongo-php-adapter/tree/1.x"
+            },
+            "time": "2021-01-18T19:53:12+00:00"
+        },
+        {
+            "name": "composer/package-versions-deprecated",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/package-versions-deprecated.git",
+                "reference": "f921205948ab93bb19f86327c793a81edb62f236"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/package-versions-deprecated/zipball/f921205948ab93bb19f86327c793a81edb62f236",
+                "reference": "f921205948ab93bb19f86327c793a81edb62f236",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.1.0 || ^2.0",
+                "php": "^7 || ^8"
+            },
+            "replace": {
+                "ocramius/package-versions": "1.11.99"
+            },
+            "require-dev": {
+                "composer/composer": "^1.9.3 || ^2.0@dev",
+                "ext-zip": "^1.13",
+                "phpunit/phpunit": "^6.5 || ^7"
+            },
+            "default-branch": true,
+            "type": "composer-plugin",
+            "extra": {
+                "class": "PackageVersions\\Installer",
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PackageVersions\\": "src/PackageVersions"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com"
+                },
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be"
+                }
+            ],
+            "description": "Composer plugin that provides efficient querying for installed package versions (no runtime IO)",
+            "support": {
+                "issues": "https://github.com/composer/package-versions-deprecated/issues",
+                "source": "https://github.com/composer/package-versions-deprecated/tree/master"
+            },
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/composer",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-12-27T20:11:05+00:00"
         },
         {
             "name": "google/apiclient",
             "version": "1.0.6-beta",
             "source": {
                 "type": "git",
-                "url": "https://github.com/google/google-api-php-client.git",
+                "url": "https://github.com/googleapis/google-api-php-client.git",
                 "reference": "a41a9dc0662e36420030eaab802dbb1f85459479"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/google/google-api-php-client/zipball/a41a9dc0662e36420030eaab802dbb1f85459479",
+                "url": "https://api.github.com/repos/googleapis/google-api-php-client/zipball/a41a9dc0662e36420030eaab802dbb1f85459479",
                 "reference": "a41a9dc0662e36420030eaab802dbb1f85459479",
                 "shasum": ""
             },
@@ -167,6 +251,10 @@
             "keywords": [
                 "google"
             ],
+            "support": {
+                "issues": "https://github.com/googleapis/google-api-php-client/issues",
+                "source": "https://github.com/googleapis/google-api-php-client/tree/1.0.6-beta"
+            },
             "time": "2014-09-30T19:33:59+00:00"
         },
         {
@@ -186,6 +274,7 @@
             "require": {
                 "php": ">=5.3.0"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -214,7 +303,11 @@
                 "cache",
                 "file system"
             ],
-            "time": "2013-07-05 13:28:27"
+            "support": {
+                "issues": "https://github.com/jdorn/FileSystemCache/issues",
+                "source": "https://github.com/jdorn/FileSystemCache/tree/master"
+            },
+            "time": "2013-07-05T13:28:27+00:00"
         },
         {
             "name": "jdorn/sql-formatter",
@@ -236,6 +329,7 @@
             "require-dev": {
                 "phpunit/phpunit": "3.7.*"
             },
+            "default-branch": true,
             "bin": [
                 "bin/sql-formatter"
             ],
@@ -267,7 +361,67 @@
                 "highlight",
                 "sql"
             ],
-            "time": "2015-08-30 16:36:01"
+            "support": {
+                "issues": "https://github.com/jdorn/sql-formatter/issues",
+                "source": "https://github.com/jdorn/sql-formatter/tree/master"
+            },
+            "time": "2015-08-30T16:36:01+00:00"
+        },
+        {
+            "name": "jean85/pretty-package-versions",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Jean85/pretty-package-versions.git",
+                "reference": "a917488320c20057da87f67d0d40543dd9427f7a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Jean85/pretty-package-versions/zipball/a917488320c20057da87f67d0d40543dd9427f7a",
+                "reference": "a917488320c20057da87f67d0d40543dd9427f7a",
+                "shasum": ""
+            },
+            "require": {
+                "composer/package-versions-deprecated": "^1.8.0",
+                "php": "^7.0|^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.0|^8.5|^9.2"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Jean85\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alessandro Lai",
+                    "email": "alessandro.lai85@gmail.com"
+                }
+            ],
+            "description": "A wrapper for ocramius/package-versions to get pretty versions strings",
+            "keywords": [
+                "composer",
+                "package",
+                "release",
+                "versions"
+            ],
+            "support": {
+                "issues": "https://github.com/Jean85/pretty-package-versions/issues",
+                "source": "https://github.com/Jean85/pretty-package-versions/tree/1.5.1"
+            },
+            "time": "2020-09-14T08:43:34+00:00"
         },
         {
             "name": "lespoilus/spyc",
@@ -286,6 +440,7 @@
             "require": {
                 "php": ">=5.3.1"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "files": [
@@ -314,16 +469,16 @@
         },
         {
             "name": "mikecao/flight",
-            "version": "dev-master",
+            "version": "v1.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mikecao/flight.git",
-                "reference": "7f402f805aa6daf66cd0863b8ca6e46472ba21af"
+                "reference": "7d5970f7617861c868a5c728764421d8950faaf0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mikecao/flight/zipball/7f402f805aa6daf66cd0863b8ca6e46472ba21af",
-                "reference": "7f402f805aa6daf66cd0863b8ca6e46472ba21af",
+                "url": "https://api.github.com/repos/mikecao/flight/zipball/7d5970f7617861c868a5c728764421d8950faaf0",
+                "reference": "7d5970f7617861c868a5c728764421d8950faaf0",
                 "shasum": ""
             },
             "require": {
@@ -353,33 +508,42 @@
             ],
             "description": "Flight is a fast, simple, extensible framework for PHP. Flight enables you to quickly and easily build RESTful web applications.",
             "homepage": "http://flightphp.com",
-            "time": "2016-03-28 19:25:27"
+            "support": {
+                "issues": "https://github.com/mikecao/flight/issues",
+                "source": "https://github.com/mikecao/flight/tree/v1.3.7"
+            },
+            "time": "2018-11-23T23:05:33+00:00"
         },
         {
             "name": "mongodb/mongodb",
-            "version": "dev-master",
+            "version": "v1.8.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mongodb/mongo-php-library.git",
-                "reference": "55e871bfff66f1f6cbe936309ba9f8eb2ca4f273"
+                "reference": "027134d41564aef94dbb13ed092802521bca4343"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mongodb/mongo-php-library/zipball/55e871bfff66f1f6cbe936309ba9f8eb2ca4f273",
-                "reference": "55e871bfff66f1f6cbe936309ba9f8eb2ca4f273",
+                "url": "https://api.github.com/repos/mongodb/mongo-php-library/zipball/027134d41564aef94dbb13ed092802521bca4343",
+                "reference": "027134d41564aef94dbb13ed092802521bca4343",
                 "shasum": ""
             },
             "require": {
-                "ext-mongodb": "^1.2.0",
-                "php": ">=5.4"
+                "ext-hash": "*",
+                "ext-json": "*",
+                "ext-mongodb": "^1.8.1",
+                "jean85/pretty-package-versions": "^1.2",
+                "php": "^7.0 || ^8.0",
+                "symfony/polyfill-php80": "^1.19"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8"
+                "squizlabs/php_codesniffer": "^3.5, <3.5.5",
+                "symfony/phpunit-bridge": "^5.2"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.2.x-dev"
+                    "dev-master": "1.8.x-dev"
                 }
             },
             "autoload": {
@@ -396,16 +560,12 @@
             ],
             "authors": [
                 {
+                    "name": "Andreas Braun",
+                    "email": "andreas.braun@mongodb.com"
+                },
+                {
                     "name": "Jeremy Mikola",
                     "email": "jmikola@gmail.com"
-                },
-                {
-                    "name": "Hannes Magnusson",
-                    "email": "bjori@mongodb.com"
-                },
-                {
-                    "name": "Derick Rethans",
-                    "email": "github@derickrethans.nl"
                 }
             ],
             "description": "MongoDB driver library",
@@ -416,7 +576,11 @@
                 "mongodb",
                 "persistence"
             ],
-            "time": "2017-05-25 14:13:41"
+            "support": {
+                "issues": "https://github.com/mongodb/mongo-php-library/issues",
+                "source": "https://github.com/mongodb/mongo-php-library/tree/v1.8"
+            },
+            "time": "2021-03-31T12:22:27+00:00"
         },
         {
             "name": "phpoffice/phpexcel",
@@ -424,12 +588,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPOffice/PHPExcel.git",
-                "reference": "7fa160905bec24ae5fdf7c98db7a4e1925a4acfa"
+                "reference": "2b601574975acfb9d4378a788ed5f2b747958095"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPOffice/PHPExcel/zipball/7fa160905bec24ae5fdf7c98db7a4e1925a4acfa",
-                "reference": "7fa160905bec24ae5fdf7c98db7a4e1925a4acfa",
+                "url": "https://api.github.com/repos/PHPOffice/PHPExcel/zipball/2b601574975acfb9d4378a788ed5f2b747958095",
+                "reference": "2b601574975acfb9d4378a788ed5f2b747958095",
                 "shasum": ""
             },
             "require": {
@@ -457,18 +621,19 @@
                     "homepage": "http://blog.maartenballiauw.be"
                 },
                 {
-                    "name": "Mark Baker"
-                },
-                {
                     "name": "Erik Tilt"
                 },
                 {
                     "name": "Franck Lefevre",
                     "homepage": "http://rootslabs.net"
+                },
+                {
+                    "name": "Mark Baker",
+                    "homepage": "http://markbakeruk.net"
                 }
             ],
             "description": "PHPExcel - OpenXML - Read, Create and Write Spreadsheet documents in PHP - Spreadsheet engine",
-            "homepage": "http://phpexcel.codeplex.com",
+            "homepage": "https://github.com/PHPOffice/PHPExcel",
             "keywords": [
                 "OpenXML",
                 "excel",
@@ -477,7 +642,12 @@
                 "xls",
                 "xlsx"
             ],
-            "time": "2016-03-22 13:35:28"
+            "support": {
+                "issues": "https://github.com/PHPOffice/PHPExcel/issues",
+                "source": "https://github.com/PHPOffice/PHPExcel/tree/develop"
+            },
+            "abandoned": "phpoffice/phpspreadsheet",
+            "time": "2018-11-22T22:50:50+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -485,19 +655,20 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "fffbc0e2a7e376dbb0a4b5f2ff6847330f20ccf9"
+                "reference": "181b89f18a90f8925ef805f950d47a7190e9b950"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/fffbc0e2a7e376dbb0a4b5f2ff6847330f20ccf9",
-                "reference": "fffbc0e2a7e376dbb0a4b5f2ff6847330f20ccf9",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/181b89f18a90f8925ef805f950d47a7190e9b950",
+                "reference": "181b89f18a90f8925ef805f950d47a7190e9b950",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
             "require-dev": {
-                "mockery/mockery": "~0.9.1,<0.9.4"
+                "mockery/mockery": "~0.9.1",
+                "symfony/phpunit-bridge": "~3.2"
             },
             "type": "library",
             "extra": {
@@ -524,13 +695,181 @@
                 }
             ],
             "description": "Swiftmailer, free feature-rich PHP mailer",
-            "homepage": "http://swiftmailer.org",
+            "homepage": "https://swiftmailer.symfony.com",
             "keywords": [
                 "email",
                 "mail",
                 "mailer"
             ],
-            "time": "2016-01-03 15:42:47"
+            "support": {
+                "issues": "https://github.com/swiftmailer/swiftmailer/issues",
+                "source": "https://github.com/swiftmailer/swiftmailer/tree/v5.4.12"
+            },
+            "time": "2018-07-31T09:26:32+00:00"
+        },
+        {
+            "name": "symfony/polyfill-ctype",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-ctype.git",
+                "reference": "c6c942b1ac76c82448322025e084cadc56048b4e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/c6c942b1ac76c82448322025e084cadc56048b4e",
+                "reference": "c6c942b1ac76c82448322025e084cadc56048b4e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "suggest": {
+                "ext-ctype": "For best performance"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.22-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gert de Pagter",
+                    "email": "BackEndTea@gmail.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for ctype functions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "ctype",
+                "polyfill",
+                "portable"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.22.1"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-01-07T16:49:33+00:00"
+        },
+        {
+            "name": "symfony/polyfill-php80",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php80.git",
+                "reference": "dc3063ba22c2a1fd2f45ed856374d79114998f91"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/dc3063ba22c2a1fd2f45ed856374d79114998f91",
+                "reference": "dc3063ba22c2a1fd2f45ed856374d79114998f91",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.22-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php80\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ],
+                "classmap": [
+                    "Resources/stubs"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ion Bazan",
+                    "email": "ion.bazan@gmail.com"
+                },
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 8.0+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.22.1"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-01-07T16:49:33+00:00"
         },
         {
             "name": "twig/twig",
@@ -538,30 +877,34 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "3d0afc03892719b7eaa5f2b8d93260a79f8c578e"
+                "reference": "83f26e402b66c6bd837548cbbca5444242219e49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/3d0afc03892719b7eaa5f2b8d93260a79f8c578e",
-                "reference": "3d0afc03892719b7eaa5f2b8d93260a79f8c578e",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/83f26e402b66c6bd837548cbbca5444242219e49",
+                "reference": "83f26e402b66c6bd837548cbbca5444242219e49",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.2.7"
+                "php": ">=7.2.5",
+                "symfony/polyfill-ctype": "^1.8"
             },
             "require-dev": {
-                "symfony/debug": "~2.7",
-                "symfony/phpunit-bridge": "~2.7"
+                "psr/container": "^1.0",
+                "symfony/phpunit-bridge": "^4.4.9|^5.0.9"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.24-dev"
+                    "dev-master": "1.44-dev"
                 }
             },
             "autoload": {
                 "psr-0": {
                     "Twig_": "lib/"
+                },
+                "psr-4": {
+                    "Twig\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -576,29 +919,41 @@
                     "role": "Lead Developer"
                 },
                 {
+                    "name": "Twig Team",
+                    "role": "Contributors"
+                },
+                {
                     "name": "Armin Ronacher",
                     "email": "armin.ronacher@active-4.com",
                     "role": "Project Founder"
-                },
-                {
-                    "name": "Twig Team",
-                    "homepage": "http://twig.sensiolabs.org/contributors",
-                    "role": "Contributors"
                 }
             ],
             "description": "Twig, the flexible, fast, and secure template language for PHP",
-            "homepage": "http://twig.sensiolabs.org",
+            "homepage": "https://twig.symfony.com",
             "keywords": [
                 "templating"
             ],
-            "time": "2016-04-01 06:54:57"
+            "support": {
+                "issues": "https://github.com/twigphp/Twig/issues",
+                "source": "https://github.com/twigphp/Twig/tree/1.x"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/twig/twig",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-04-07T15:57:29+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "mikecao/flight": 20,
         "jdorn/sql-formatter": 20,
         "jdorn/file-system-cache": 20,
         "phpoffice/phpexcel": 20,
@@ -613,5 +968,6 @@
         "php": ">=5.3",
         "ext-pdo": "*"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
 }
